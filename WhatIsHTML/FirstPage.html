@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+    <title>DropDown Info</title>
+    <link rel="stylesheets" href="Css.css">
+</head>
+<style>
+    * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#body{
+    background: linear-gradient(to bottom right, #FFE5B4,#FFA500);
+    font-family: sans-serif;
+}
+#accordion{
+    margin: 100px auto;
+    width: 600px;
+}
+#accordion li{
+    list-style: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: grey;
+    padding: 10px;
+}
+#accordion li label{
+padding: 10px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 22px;
+font-weight: 500;
+color: rgb(255, 0, 0);
+cursor: pointer;
+}
+#accordion li label span{
+    transform: rotate(90deg);
+color: rgb(255, 0, 0);
+font-size: 22px;
+}
+#accordion label + input[type="radio"]{
+    display: none;
+}
+#accordion .content{
+    padding: 0 10px;
+line-height: 26px;
+font-size: 20px;
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.5s;
+
+
+}
+#accordion label + input[type="radio"]:checked  + .content{
+    max-height: 400px;
+
+}
+#par{
+    color: white;
+}
+</style>
+<body id="body">
+    <link rel="stylesheets" href="Css.css">
+    <ul id="accordion">
+        <li>
+            <label for="first">What is HTML?<span>&#x3e;</span></label>
+            <input type="radio" name="acordion" id="first" checked/>
+            <div class="content">
+                <p id="par">
+                    HTML is the standard markup language for creating Web pages.<br>HTML describes the structure of a Web page.<br> HTML consists of a series of elements.<br> HTML elements tell the browser how to display the content. 
+                </p>
+            </div>
+        </li>
+        <li>
+            <label for="second">What is CSS?<span>&#x3e;</span></label>
+            <input type="radio" name="acordion" id="second" />
+            <div class="content">
+                <p id="par">
+                    CSS is a tool that helps developers.<br>CSS makes "the colors" of the Web page.<br> Any element in the HTML file can be designed differently.<br> It is easy to use and learn. 
+                </p>
+            </div>
+        </li>
+        <li>
+            <label for="third">What is JavaScript?<span>&#x3e;</span></label>
+            <input type="radio" name="acordion" id="third" />
+            <div class="content">
+                <p id="par">
+                    JavaScript is a programming language that makes the HTML file functional.<br>JavaScript is a complex language yet used everywhere.<br> It can be used for Frontend or Backend development.<br> JavaScript tells the elements like buttons etc. what to do. 
+                </p>
+            </div>
+        </li>
+        <li>
+            <label for="fourth">What is React?<span>&#x3e;</span></label>
+            <input type="radio" name="acordion" id="fourth" />
+            <div class="content">
+                <p id="par">
+                    React is a commonly used framework for development.<br>React is mainly used in Frontend development.<br> It is also described as a library used for developing user intefraces.<br>  
+                </p>
+            </div>
+        </li>
+        <li>
+            <label for="fifth">What is Bootstrap?<span>&#x3e;</span></label>
+            <input type="radio" name="acordion" id="fifth" />
+            <div class="content">
+                <p id="par">
+                    Bootstrap is a free,open sourse front-end development framework.<br>It is used for developing websites and web apps.<br> Bootstrap provides a collection of syntax for template design.<br>  
+                </p>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>
